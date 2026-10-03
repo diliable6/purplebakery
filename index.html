@@ -1,1 +1,1455 @@
 
+
+🖼 <!doctype html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Purple Bakery</title>
+
+<style>
+*{
+    box-sizing:border-box
+}
+
+html{
+    scroll-behavior:smooth;
+    scroll-padding-top:75px
+}
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    color:#332936;
+    background:#fffafd
+}
+
+a{
+    text-decoration:none;
+    color:inherit
+}
+
+header{
+    position:sticky;
+    top:0;
+    z-index:10;
+    background:#fff;
+    box-shadow:0 2px 15px #0001
+}
+
+nav{
+    max-width:1150px;
+    height:72px;
+    margin:auto;
+    padding:0 20px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between
+}
+
+.logo{
+    font:bold 27px Georgia;
+    color:#70477a
+}
+
+.logo span{
+    color:#b47fbe
+}
+
+.menu{
+    display:flex;
+    gap:20px;
+    list-style:none
+}
+
+.menu a{
+    font-weight:bold;
+    font-size:14px
+}
+
+.menu a:hover{
+    color:#925e9d
+}
+
+.btn,
+.order,
+.send{
+    background:#76517f;
+    color:#fff;
+    border:0;
+    cursor:pointer;
+    font-weight:bold;
+    border-radius:25px;
+    padding:11px 18px
+}
+
+
+/* HERO */
+
+.hero{
+    min-height:610px;
+    background:
+        linear-gradient(#2b183099,#2b183099),
+        url("https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1600&q=85")
+        center/cover;
+
+    display:flex;
+    align-items:center
+}
+
+.hero div{
+    max-width:1150px;
+    margin:auto;
+    padding:30px 20px;
+    color:#fff;
+    width:100%
+}
+
+.hero small{
+    letter-spacing:2px
+}
+
+.hero h1{
+    font:bold 70px Georgia;
+    max-width:750px;
+    margin:15px 0
+}
+
+.hero p{
+    max-width:560px;
+    line-height:1.7;
+    font-size:18px
+}
+
+.hero a{
+    display:inline-block;
+    margin:10px 8px 0 0;
+    padding:14px 22px;
+    border-radius:25px;
+    background:#fff;
+    color:#70477a;
+    font-weight:bold
+}
+
+.hero a:last-child{
+    background:transparent;
+    color:#fff;
+    border:1px solid #fff
+}
+
+
+/* UMUMIY */
+
+section{
+    padding:75px 20px
+}
+
+.container{
+    max-width:1150px;
+    margin:auto
+}
+
+.title{
+    text-align:center;
+    margin-bottom:40px
+}
+
+.title span{
+    color:#a36eac;
+    font-weight:bold;
+    letter-spacing:2px
+}
+
+.title h2{
+    font:42px Georgia;
+    margin:10px
+}
+
+.title p{
+    color:#756c78;
+    line-height:1.6
+}
+
+
+/* MAHSULOTLAR */
+
+.products{
+    background:#f8f1f8
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px
+}
+
+.card{
+    background:#fff;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 5px 20px #00000010
+}
+
+.card img{
+    width:100%;
+    height:210px;
+    object-fit:cover
+}
+
+.card div{
+    padding:16px
+}
+
+.card h3{
+    font:21px Georgia;
+    margin:0 0 8px
+}
+
+.card p{
+    font-size:13px;
+    color:#776d78;
+    min-height:38px
+}
+
+.bottom{
+    display:flex;
+    justify-content:space-between;
+    align-items:center
+}
+
+.price{
+    font-weight:bold;
+    color:#76517f
+}
+
+.order{
+    padding:8px 12px;
+    font-size:12px
+}
+
+
+/* BIZ HAQIMIZDA */
+
+.about{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:55px;
+    align-items:center
+}
+
+.about img{
+    width:100%;
+    height:470px;
+    object-fit:cover;
+    border-radius:22px
+}
+
+.about h2{
+    font:43px Georgia
+}
+
+.about p{
+    line-height:1.8;
+    color:#716873
+}
+
+.about li{
+    margin:14px 0;
+    font-weight:bold;
+    list-style:none
+}
+
+.about li:before{
+    content:"✓";
+    color:#76517f;
+    background:#ead9ed;
+    border-radius:50%;
+    padding:4px 7px;
+    margin-right:8px
+}
+
+
+/* BOG'LANISH */
+
+.info{
+    background:#76517f;
+    color:#fff
+}
+
+.info .title h2{
+    color:#fff
+}
+
+.info .title p{
+    color:#eadfee
+}
+
+.info-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px
+}
+
+.info-card{
+    padding:28px;
+    background:#ffffff1a;
+    border-radius:18px
+}
+
+.info-card p{
+    line-height:1.6;
+    color:#eee1f0
+}
+
+
+/* FIKRLAR */
+
+.comments{
+    background:#fff
+}
+
+.form{
+    max-width:700px;
+    margin:auto;
+    background:#faf5fb;
+    padding:25px;
+    border-radius:18px
+}
+
+> Maftuna:
+🖼 .form input,
+.form textarea,
+.modal input,
+.modal textarea{
+    width:100%;
+    padding:13px;
+    margin-bottom:12px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    font:inherit
+}
+
+.form textarea,
+.modal textarea{
+    min-height:110px
+}
+
+.send{
+    width:100%
+}
+
+.comment{
+    max-width:700px;
+    margin:12px auto;
+    background:#faf5fb;
+    padding:16px;
+    border-radius:12px
+}
+
+.comment strong{
+    color:#76517f
+}
+
+.comment p{
+    margin-bottom:0;
+    color:#655d67
+}
+
+
+/* FOOTER */
+
+footer{
+    background:#29222b;
+    color:#fff;
+    padding:40px 20px;
+    text-align:center
+}
+
+.footer-links{
+    display:flex;
+    justify-content:center;
+    gap:18px;
+    flex-wrap:wrap;
+    margin-top:20px;
+    color:#ddd
+}
+
+.copy{
+    margin-top:25px;
+    color:#aaa;
+    font-size:12px
+}
+
+
+/* BUYURTMA OYNASI */
+
+.modal{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:#0009;
+    z-index:20;
+    align-items:center;
+    justify-content:center;
+    padding:20px
+}
+
+.modal.active{
+    display:flex
+}
+
+.modal>div{
+    background:#fff;
+    padding:28px;
+    border-radius:20px;
+    max-width:430px;
+    width:100%;
+    position:relative
+}
+
+.close{
+    position:absolute;
+    right:18px;
+    top:10px;
+    font-size:28px;
+    cursor:pointer
+}
+
+.modal h2{
+    font:30px Georgia
+}
+
+
+/* TELEFON UCHUN */
+
+@media(max-width:900px){
+
+    .grid{
+        grid-template-columns:repeat(2,1fr)
+    }
+
+    .about{
+        grid-template-columns:1fr
+    }
+
+    .info-grid{
+        grid-template-columns:1fr
+    }
+
+    .menu{
+        display:none
+    }
+}
+
+
+@media(max-width:600px){
+
+    .grid{
+        grid-template-columns:1fr
+    }
+
+    .hero h1{
+        font-size:47px
+    }
+
+    .title h2{
+        font-size:34px
+    }
+
+    .about h2{
+        font-size:35px
+    }
+
+    .hero{
+        min-height:580px
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- NAVBAR -->
+
+<header>
+
+<nav>
+
+<a class="logo" href="#home">
+    Purple <span>Bakery</span>
+</a>
+
+<ul class="menu">
+
+<li>
+<a href="#home">
+    Bosh sahifa
+</a>
+</li>
+
+<li>
+<a href="#products">
+    Shirinliklar
+</a>
+</li>
+
+<li>
+<a href="#about">
+    Biz haqimizda
+</a>
+</li>
+
+<li>
+<a href="#comments">
+    Fikrlar
+</a>
+</li>
+
+<li>
+<a href="#contact">
+    Bog‘lanish
+</a>
+</li>
+
+</ul>
+
+<a class="btn" href="#contact">
+    Bog‘lanish
+</a>
+
+</nav>
+
+</header>
+
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div>
+
+<small>
+    URGANCHDAGI SHIRIN DUNYO
+</small>
+
+<h1>
+    Har bir kuningizga
+    shirinlik qo‘shing
+</h1>
+
+<p>
+    Purple Bakery — yangi, mazali va chiroyli
+    shirinliklar tayyorlaydigan zamonaviy
+    shirinlik do‘koni.
+</p>
+
+<a href="#products">
+    Shirinliklarni ko‘rish →
+</a>
+
+<a href="#contact">
+    Biz bilan bog‘lanish
+</a>
+
+</div>
+
+</section>
+
+
+
+<!-- SHIRINLIKLAR -->
+
+<section class="products" id="products">
+
+<div class="container">
+
+<div class="title">
+
+<span>
+    BIZNING MENYU
+</span>
+
+<h2>
+    Sevimli shirinliklaringiz
+</h2>
+
+<p>
+    O‘zingizga yoqqan shirinlikni tanlang
+    va buyurtma bering.
+</p>
+
+</div>
+
+
+<div class="grid">
+
+
+<!-- 1 -->
+
+<div class="card">
+
+<img
+src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=80"
+alt="Maxsus tort">
+
+<div>
+
+<h3>
+    Maxsus tort
+</h3>
+
+<p>
+    Bayram va tug‘ilgan kunlar uchun tort.
+</p>
+
+<div class="bottom">
+
+<b class="price">
+    250 000 so‘m
+</b>
+
+<button
+class="order"
+onclick="openOrder('Maxsus tort')">
+    Buyurtma
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- 2 -->
+
+<div class="card">
+
+<img
+src="https://images.unsplash.com/photo-1587668178277-295251f900ce?auto=format&fit=crop&w=800&q=80"
+alt="Vanilla Cupcake">
+
+<div>
+
+<h3>
+    Vanilla Cupcake
+</h3>
+
+<p>
+    Yumshoq vanilli kremli cupcake.
+</p>
+
+<div class="bottom">
+
+<b class="price">
+    25 000 so‘m
+</b>
+
+<button
+class="order"
+onclick="openOrder('Vanilla Cupcake')">
+    Buyurtma
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- 3 -->
+
+<div class="card">
+
+<img
+src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=800&q=80"
+alt="Sweet Donut">
+
+<div>
+
+<h3>
+    Sweet Donut
+</h3>
+
+<p>
+    Yumshoq va shirin donutlar.
+</p>
+
+
+🖼 <div class="bottom">
+
+<b class="price">
+    20 000 so‘m
+</b>
+
+<button
+class="order"
+onclick="openOrder('Sweet Donut')">
+    Buyurtma
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- 4 -->
+
+<div class="card">
+
+<img
+src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=800&q=80"
+alt="Cookies">
+
+<div>
+
+<h3>
+    Classic Cookies
+</h3>
+
+<p>
+    Choy va qahva bilan ajoyib pechenye.
+</p>
+
+<div class="bottom">
+
+<b class="price">
+    45 000 so‘m
+</b>
+
+<button
+class="order"
+onclick="openOrder('Classic Cookies')">
+    Buyurtma
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- 5 -->
+
+<div class="card">
+
+<img
+src="https://images.unsplash.com/photo-1569864358642-9d1684040f43?auto=format&fit=crop&w=800&q=80"
+alt="French Macaron">
+
+<div>
+
+<h3>
+    French Macaron
+</h3>
+
+<p>
+    Nafis va rang-barang makaronlar.
+</p>
+
+<div class="bottom">
+
+<b class="price">
+    65 000 so‘m
+</b>
+
+<button
+class="order"
+onclick="openOrder('French Macaron')">
+    Buyurtma
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- 6 -->
+
+<div class="card">
+
+<img
+src="https://images.unsplash.com/photo-1571115177098-24ec42ed204d?auto=format&fit=crop&w=800&q=80"
+alt="Chocolate Dessert">
+
+<div>
+
+<h3>
+    Chocolate Dessert
+</h3>
+
+<p>
+    Shokoladni sevuvchilar uchun desert.
+</p>
+
+<div class="bottom">
+
+<b class="price">
+    55 000 so‘m
+</b>
+
+<button
+class="order"
+onclick="openOrder('Chocolate Dessert')">
+    Buyurtma
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- 7 -->
+
+<div class="card">
+
+<img
+src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=800&q=80"
+alt="Strawberry Cake">
+
+<div>
+
+<h3>
+    Strawberry Cake
+</h3>
+
+<p>
+    Qulupnayli krem bilan tort.
+</p>
+
+<div class="bottom">
+
+<b class="price">
+    180 000 so‘m
+</b>
+
+<button
+class="order"
+onclick="openOrder('Strawberry Cake')">
+    Buyurtma
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- 8 -->
+
+<div class="card">
+
+<img
+src="https://images.unsplash.com/photo-1616541823729-00fe0aacd32c?auto=format&fit=crop&w=800&q=80"
+alt="Red Velvet">
+
+<div>
+
+<h3>
+    Red Velvet
+</h3>
+
+<p>
+    Yumshoq biskvit va qaymoqli krem.
+</p>
+
+<div class="bottom">
+
+<b class="price">
+    200 000 so‘m
+</b>
+
+<button
+class="order"
+onclick="openOrder('Red Velvet')">
+    Buyurtma
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- 9 -->
+
+<div class="card">
+
+<img
+src="https://images.unsplash.com/photo-1567171466295-4afa63d454f1?auto=format&fit=crop&w=800&q=80"
+alt="Cheesecake">
+
+<div>
+
+<h3>
+    Cheesecake
+</h3>
+
+<p>
+    Yumshoq pishloqli kremli desert.
+</p>
+
+<div class="bottom">
+
+<b class="price">
+    70 000 so‘m
+</b>
+
+<button
+class="order"
+onclick="openOrder('Cheesecake')">
+    Buyurtma
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- 10 -->
+
+<div class="card">
+
+<img
+src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=800&q=80"
+alt="Chocolate Cake">
+
+<div>
+
+<h3>
+    Chocolate Cake
+</h3>
+
+<p>
+    Shokolad ta’mini sevuvchilar uchun tort.
+</p>
+
+<div class="bottom">
+
+<b class="price">
+    190 000 so‘m
+</b>
+
+<button
+class="order"
+onclick="openOrder('Chocolate Cake')">
+    Buyurtma
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- 11 -->
+
+<div class="card">
+
+<img
+src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=800&q=80"
+alt="Croissant">
+
+<div>
+
+<h3>
+    Fresh Croissant
+</h3>
+
+<p>
+    Yangi pishirilgan mayin kruassan.
+</p>
+
+<div class="bottom">
+
+<b class="price">
+    18 000 so‘m
+</b>
+
+<button
+class="order"
+onclick="openOrder('Fresh Croissant')">
+    Buyurtma
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- 12 -->
+
+<div class="card">
+
+<img
+src="https://images.unsplash.com/photo-1486427944299-d1955d23e34d?auto=format&fit=crop&w=800&q=80"
+alt="Strawberry Cupcake">
+
+<div>
+
+<h3>
+    Strawberry Cupcake
+</h3>
+
+<p>
+    Qulupnayli krem bilan cupcake.
+</p>
+
+<div class="bottom">
+
+<b class="price">
+    28 000 so‘m
+</b>
+
+<button
+class="order"
+onclick="openOrder('Strawberry Cupcake')">
+    Buyurtma
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+</div>
+</div>
+
+</section>
+
+
+
+<!-- BIZ HAQIMIZDA -->
+
+<section id="about">
+
+<div class="container">
+
+<div class="about">
+
+
+🖼 <img
+src="https://images.unsplash.com/photo-1557979619-445218f326b9?auto=format&fit=crop&w=1000&q=85"
+alt="Purple Bakery">
+
+
+<div>
+
+<span style="color:#a36eac;font-weight:bold;letter-spacing:2px">
+    BIZ HAQIMIZDA
+</span>
+
+<h2>
+    Shirinlik — bu kichik baxt
+</h2>
+
+<p>
+    Purple Bakery jamoasi siz uchun mazali,
+    chiroyli va sifatli shirinliklar tayyorlaydi.
+    Biz har bir buyurtmaga alohida e’tibor beramiz.
+</p>
+
+<ul>
+
+<li>
+    Yangi mahsulotlardan tayyorlanadi
+</li>
+
+<li>
+    Buyurtma asosida tayyorlash
+</li>
+
+<li>
+    To‘y va marosimlar uchun xizmat
+</li>
+
+<li>
+    Katta buyurtmalar qabul qilinadi
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- BOG‘LANISH -->
+
+<section class="info" id="contact">
+
+<div class="container">
+
+<div class="title">
+
+<span style="color:#ead3ef">
+    BOG‘LANISH
+</span>
+
+<h2>
+    Purple Bakery
+</h2>
+
+<p>
+    Savollaringiz va buyurtmalaringiz
+    uchun biz bilan bog‘laning.
+</p>
+
+</div>
+
+
+<div class="info-grid">
+
+<div class="info-card">
+
+<h3>
+    📍 Manzil
+</h3>
+
+<p>
+    Urganch shahri
+</p>
+
+</div>
+
+
+<div class="info-card">
+
+<h3>
+    📞 Telefon
+</h3>
+
+<p>
+
+<a href="tel:+998991628929">
+    99 162 89 29
+</a>
+
+</p>
+
+</div>
+
+
+<div class="info-card">
+
+<h3>
+    🕘 Ish vaqti
+</h3>
+
+<p>
+    Haftada 6 kun<br>
+    09:00 — 20:00
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- FIKRLAR -->
+
+<section id="comments">
+
+<div class="container">
+
+<div class="title">
+
+<span>
+    MIJOZLAR FIKRI
+</span>
+
+<h2>
+    Fikr va tilaklaringiz
+</h2>
+
+<p>
+    Purple Bakery haqida o‘z fikringizni qoldiring.
+</p>
+
+</div>
+
+
+<div class="form">
+
+<input
+id="name"
+placeholder="Ismingiz">
+
+<textarea
+id="text"
+placeholder="Fikringiz yoki tilagingiz...">
+</textarea>
+
+<button
+class="send"
+onclick="addComment()">
+
+Fikr qoldirish
+
+</button>
+
+</div>
+
+
+<div id="list"></div>
+
+</div>
+
+</section>
+
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="logo">
+    Purple <span>Bakery</span>
+</div>
+
+<p>
+    Sizni shirin dunyomizda kutib qolamiz.
+</p>
+
+<div class="footer-links">
+
+<a href="#home">
+    Bosh sahifa
+</a>
+
+<a href="#products">
+    Menyu
+</a>
+
+<a href="#about">
+    Biz haqimizda
+</a>
+
+<a href="#comments">
+    Fikrlar
+</a>
+
+<a href="#contact">
+    Bog‘lanish
+</a>
+
+</div>
+
+<div class="copy">
+    © 2026 Purple Bakery. Barcha huquqlar himoyalangan.
+</div>
+
+</footer>
+
+
+
+<!-- BUYURTMA OYNASI -->
+
+<div class="modal" id="modal">
+
+<div>
+
+<span
+class="close"
+onclick="closeOrder()">
+    ×
+</span>
+
+<h2>
+    Buyurtma berish
+</h2>
+
+<input
+id="prod"
+readonly>
+
+<input
+id="oname"
+placeholder="Ismingiz">
+
+<input
+id="phone"
+placeholder="Telefon raqamingiz">
+
+<textarea
+id="msg"
+placeholder="Qo‘shimcha ma’lumot...">
+</textarea>
+
+<button
+class="send"
+onclick="sendOrder()">
+
+Buyurtmani yuborish
+
+</button>
+
+</div>
+
+</div>
+
+
+
+<script>
+
+function openOrder(product){
+
+    document
+    .getElementById("prod")
+    .value = product;
+
+    document
+    .getElementById("modal")
+    .classList
+    .add("active");
+}
+
+
+function closeOrder(){
+
+    document
+    .getElementById("modal")
+    .classList
+    .remove("active");
+}
+
+
+function sendOrder(){
+
+    let name =
+        document
+        .getElementById("oname")
+        .value
+        .trim();
+
+    let phone =
+        document
+        .getElementById("phone")
+        .value
+        .trim();
+
+    if(!name || !phone){
+
+        alert(
+            "Iltimos, ism va telefon raqamingizni kiriting."
+        );
+
+        return;
+    }
+
+    alert(
+        "Rahmat, " +
+        name +
+        "! Buyurtmangiz qabul qilindi."
+    );
+
+    closeOrder();
+}
+
+
+function addComment(){
+
+    let name =
+        document
+        .getElementById("name")
+        .value
+        .trim();
+
+    let text =
+        document
+        .getElementById("text")
+        .value
+        .trim();
+
+
+    if(!name || !text){
+
+        alert(
+            "Iltimos, ism va fikringizni kiriting."
+        );
+
+        return;
+    }
+
+
+    let comment =
+        document.createElement("div");
+
+    comment.className = "comment";
+
+
+    comment.innerHTML =
+        "<strong>" +
+        name +
+        "</strong>" +
+
+        "<p>" +
+        text +
+        "</p>";
+
+
+document
+        .getElementById("list")
+        .prepend(comment);
+
+
+    document
+        .getElementById("name")
+        .value = "";
+
+    document
+        .getElementById("text")
+        .value = "";
+
+
+    alert(
+        "Fikringiz uchun rahmat! 💜"
+    );
+}
+
+</script>
+
+</body>
+</html>
